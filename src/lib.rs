@@ -1,13 +1,7 @@
 use wasm_bindgen::prelude::*;
-
-mod utils;
-
-#[wasm_bindgen]
-extern "C" {
-    fn alert(s: &str);
-}
+use web_sys::console;
 
 #[wasm_bindgen]
-pub fn greet() {
-    alert("Hello, weirdo-architect!");
+pub fn hello_screeps() {
+    console::log_1(&JsValue::from("Hello from the other side! (Rust is here)"))
 }
